@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：CreditCarLogDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月12日，PingTech：创建
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.valuestore.dao.ICreditCarLogDao">
+	<sql id="sqlColumns">
+    	a.id,
+	    a.credit_id as creditId,
+	    a.car_number as carNumber,
+	    a.car_type as carType,
+	    a.last_credit as lastCredit,
+	    a.expect_score as expectScore,
+	    a.create_date as createDate,
+	    a.score,
+	    a.remarks
+    </sql>
+    
+	<select id="count" resultType="int">
+        SELECT count(1) FROM t_credit_car_log a
+        <where>
+        	<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+        		and a.car_number = #{page.entity.carNumber}
+        	</if>
+        	<if test="page.entity.carType != null and page.entity.carType != ''">
+        		and a.car_type = #{page.entity.carType}
+        	</if>
+        	<if test="page.entity.creditId != null and page.entity.creditId != ''">
+        		and a.credit_id = #{page.entity.creditId}
+        	</if>
+			<if test="page.entity.startPassTimeDate!=null">
+				and a.pass_time  &gt;= #{page.entity.startPassTimeDate}
+			</if>
+			<if test="page.entity.endPassTimeDate!=null">
+				and a.pass_time  &lt;= #{page.entity.endPassTimeDate}
+			</if>
+			<if test="page.entity.startLastPassDate!=null">
+				and a.create_date  &gt;= #{page.entity.startLastPassDate}
+			</if>
+			<if test="page.entity.endLastPassDate!=null">
+				and a.create_date  &lt;= #{page.entity.endLastPassDate}
+			</if>
+        </where>
+    </select>
+    
+    <select id="findPage" resultType="cn.com.pingtech.mock.bigdata.valuestore.entity.CreditCarLog">
+		SELECT <include refid="sqlColumns"/> FROM t_credit_car_log a
+		<where>
+        	<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+        		and a.car_number = #{page.entity.carNumber}
+        	</if>
+        	<if test="page.entity.carType != null and page.entity.carType != ''">
+        		and a.car_type = #{page.entity.carType}
+        	</if>
+        	<if test="page.entity.creditId != null and page.entity.creditId != ''">
+        		and a.credit_id = #{page.entity.creditId}
+        	</if>
+			<if test="page.entity.startPassTimeDate!=null">
+				and a.pass_time  &gt;= #{page.entity.startPassTimeDate}
+			</if>
+			<if test="page.entity.endPassTimeDate!=null">
+				and a.pass_time  &lt;= #{page.entity.endPassTimeDate}
+			</if>
+			<if test="page.entity.startLastPassDate!=null">
+				and a.create_date  &gt;= #{page.entity.startLastPassDate}
+			</if>
+			<if test="page.entity.endLastPassDate!=null">
+				and a.create_date  &lt;= #{page.entity.endLastPassDate}
+			</if>
+        </where>
+		ORDER BY a.create_date desc
+		LIMIT  ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+    </select>
+    
+    <select id="findList" resultType="cn.com.pingtech.mock.bigdata.valuestore.entity.CreditCarLog">
+    	SELECT <include refid="sqlColumns"/> FROM t_credit_car_log a
+		<where>
+        	<if test="carNumber != null and carNumber != ''">
+        		and a.car_number = #{carNumber}
+        	</if>
+        	<if test="carType != null and carType != ''">
+        		and a.car_type = #{carType}
+        	</if>
+        	<if test="creditId != null and creditId != ''">
+        		and a.credit_id = #{creditId}
+        	</if>
+			<if test="page.entity.startLastPassDate!=null and page.entity.startLastPassDate!=''">
+				and a.create_date  &gt;= #{page.entity.startLastPassDate}
+			</if>
+			<if test="page.entity.endLastPassDate!=null and page.entity.endLastPassDate!=''">
+				and a.create_date  &lt;= #{page.entity.endLastPassDate}
+			</if>
+        </where>
+        ORDER BY a.create_date desc
+    </select>
+
+</mapper>

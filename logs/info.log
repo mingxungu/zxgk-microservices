@@ -1,0 +1,297 @@
+2019-10-11 11:32:25.723 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 42336 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 11:32:25.726 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 11:33:37.099 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 43268 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 11:33:37.101 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 11:33:37.114 [main] INFO  o.s.core.annotation.AnnotationUtils (AnnotationUtils.java:1973) - Failed to introspect annotations on class cn.com.pingtech.ZxgkMockApplication: java.lang.annotation.AnnotationFormatError: Invalid default: public abstract java.lang.Class org.mybatis.spring.annotation.MapperScan.factoryBean()
+2019-10-11 13:56:31.283 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 45952 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 13:56:31.286 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 13:56:31.303 [main] INFO  o.s.core.annotation.AnnotationUtils (AnnotationUtils.java:1973) - Failed to introspect annotations on class cn.com.pingtech.ZxgkMockApplication: java.lang.annotation.AnnotationFormatError: Invalid default: public abstract java.lang.Class org.mybatis.spring.annotation.MapperScan.factoryBean()
+2019-10-11 14:01:46.519 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 47588 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 14:01:46.521 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 14:01:46.566 [main] INFO  o.s.core.annotation.AnnotationUtils (AnnotationUtils.java:1973) - Failed to introspect annotations on class cn.com.pingtech.ZxgkMockApplication: java.lang.annotation.AnnotationFormatError: Invalid default: public abstract java.lang.Class org.mybatis.spring.annotation.MapperScan.factoryBean()
+2019-10-11 14:37:21.041 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 30444 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 14:37:21.044 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 14:37:21.920 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3eb18589] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 14:37:22.127 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 14:37:22.140 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 14:37:22.148 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 14:37:22.148 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 14:37:22.240 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 14:37:22.241 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1158 ms
+2019-10-11 14:37:22.321 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 14:37:22.334 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 14:51:51.194 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 26908 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 14:51:51.196 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 14:51:52.114 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ba90341b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 14:51:52.297 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 14:51:52.308 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 14:51:52.315 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 14:51:52.316 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 14:51:52.403 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 14:51:52.404 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1158 ms
+2019-10-11 14:51:52.485 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 14:51:52.499 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 14:52:05.315 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 26376 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 14:52:05.317 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 14:52:06.188 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7bb0f148] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 14:52:06.376 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 14:52:06.387 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 14:52:06.396 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 14:52:06.396 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 14:52:06.487 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 14:52:06.488 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1131 ms
+2019-10-11 14:52:06.578 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 14:52:06.592 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 14:52:33.160 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 44532 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 14:52:33.162 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 14:52:34.079 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$948d2072] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 14:52:34.259 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 14:52:34.270 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 14:52:34.277 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 14:52:34.277 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 14:52:34.366 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 14:52:34.366 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1126 ms
+2019-10-11 14:52:34.447 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 14:52:34.462 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 14:52:44.939 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 43616 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 14:52:44.941 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 14:52:45.838 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$216b0fcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 14:52:46.024 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 14:52:46.035 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 14:52:46.042 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 14:52:46.042 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 14:52:46.135 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 14:52:46.136 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1156 ms
+2019-10-11 14:52:46.215 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 14:52:46.230 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 14:54:15.724 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 45912 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 14:54:15.726 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 14:54:16.553 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3ed7fc27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 14:54:16.749 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 14:54:16.761 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 14:54:16.769 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 14:54:16.769 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 14:54:16.858 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 14:54:16.858 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1098 ms
+2019-10-11 14:54:16.948 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 14:54:16.964 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 14:58:39.532 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 28760 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 14:58:39.534 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 14:58:40.346 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cdaa7188] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 14:58:40.528 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 14:58:40.539 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 14:58:40.547 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 14:58:40.548 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 14:58:40.641 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 14:58:40.642 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1073 ms
+2019-10-11 14:58:40.740 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 14:58:40.754 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 15:16:26.898 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 32360 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:16:26.900 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:16:27.768 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d6ef751] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:16:27.951 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:16:27.961 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:16:27.968 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:16:27.969 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:16:28.057 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:16:28.058 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1120 ms
+2019-10-11 15:16:28.139 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 15:16:28.154 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 15:21:32.966 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 45956 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:21:32.971 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:21:33.779 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b428f899] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:21:33.954 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:21:33.966 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:21:33.973 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:21:33.973 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:21:34.061 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:21:34.061 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1054 ms
+2019-10-11 15:21:34.744 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:21:34.827 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:21:34.901 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:208) - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:21:34.904 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 15:21:34.917 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 15:24:07.224 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 37640 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:24:07.226 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:24:08.052 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b184d646] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:24:08.234 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:24:08.244 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:24:08.252 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:24:08.252 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:24:08.338 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:24:08.338 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1079 ms
+2019-10-11 15:24:08.905 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:24:08.985 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:24:09.104 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:151) - Context refreshed
+2019-10-11 15:24:09.125 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:154) - Found 1 custom documentation plugin(s)
+2019-10-11 15:24:09.153 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner (ApiListingReferenceScanner.java:41) - Scanning for api listing references
+2019-10-11 15:24:09.326 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator (CachingOperationNameGenerator.java:40) - Generating unique operation named: searchUsingPOST_1
+2019-10-11 15:24:09.348 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:24:09.371 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:202) - Tomcat started on port(s): 9999 (http) with context path '/zxgk-mock'
+2019-10-11 15:24:09.375 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:59) - Started ZxgkMockApplication in 2.475 seconds (JVM running for 3.035)
+2019-10-11 15:25:06.393 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 29052 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:25:06.395 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:25:07.226 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$961c2c36] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:25:07.403 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:25:07.413 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:25:07.420 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:25:07.421 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:25:07.507 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:25:07.507 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1078 ms
+2019-10-11 15:25:08.054 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:25:08.135 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:25:08.202 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:208) - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:25:08.206 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Stopping service [Tomcat]
+2019-10-11 15:25:08.217 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener (ConditionEvaluationReportLoggingListener.java:136) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 15:34:36.792 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 26784 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:34:36.796 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:34:37.654 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$307e4ac6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:34:37.837 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:34:37.849 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:34:37.856 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:34:37.857 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:34:37.947 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:34:37.947 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1116 ms
+2019-10-11 15:34:38.516 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:34:38.596 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:34:38.726 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:151) - Context refreshed
+2019-10-11 15:34:38.740 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:154) - Found 1 custom documentation plugin(s)
+2019-10-11 15:34:38.763 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner (ApiListingReferenceScanner.java:41) - Scanning for api listing references
+2019-10-11 15:34:38.862 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator (CachingOperationNameGenerator.java:40) - Generating unique operation named: searchUsingPOST_1
+2019-10-11 15:34:38.874 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:34:38.891 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:202) - Tomcat started on port(s): 9999 (http) with context path '/zxgk-mock'
+2019-10-11 15:34:38.894 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:59) - Started ZxgkMockApplication in 2.449 seconds (JVM running for 3.014)
+2019-10-11 15:35:34.666 [http-nio-9999-exec-4] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:35:34.666 [http-nio-9999-exec-4] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:524) - Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:35:34.672 [http-nio-9999-exec-4] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:546) - Completed initialization in 6 ms
+2019-10-11 15:37:22.375 [http-nio-9999-exec-3] INFO  c.alibaba.druid.pool.DruidDataSource (Log4j2Impl.java:106) - {dataSource-1} inited
+2019-10-11 15:38:45.402 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 48344 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:38:45.406 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:38:46.214 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b78f155c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:38:46.394 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:38:46.405 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:38:46.412 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:38:46.412 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:38:46.507 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:38:46.507 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1065 ms
+2019-10-11 15:38:47.093 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:38:47.176 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:38:47.311 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:151) - Context refreshed
+2019-10-11 15:38:47.326 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:154) - Found 1 custom documentation plugin(s)
+2019-10-11 15:38:47.350 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner (ApiListingReferenceScanner.java:41) - Scanning for api listing references
+2019-10-11 15:38:47.447 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator (CachingOperationNameGenerator.java:40) - Generating unique operation named: searchUsingPOST_1
+2019-10-11 15:38:47.460 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:38:47.478 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:202) - Tomcat started on port(s): 9999 (http) with context path '/zxgk-mock'
+2019-10-11 15:38:47.480 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:59) - Started ZxgkMockApplication in 2.421 seconds (JVM running for 3.068)
+2019-10-11 15:38:55.246 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:38:55.247 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:524) - Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:38:55.252 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:546) - Completed initialization in 5 ms
+2019-10-11 15:38:55.384 [http-nio-9999-exec-1] INFO  c.alibaba.druid.pool.DruidDataSource (Log4j2Impl.java:106) - {dataSource-1} inited
+2019-10-11 15:39:24.893 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 34960 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:39:24.897 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:39:25.901 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2fe0e2f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:39:26.088 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:39:26.098 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:39:26.105 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:39:26.105 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:39:26.191 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:39:26.191 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1234 ms
+2019-10-11 15:39:26.781 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:39:26.861 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:39:26.991 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:151) - Context refreshed
+2019-10-11 15:39:27.005 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:154) - Found 1 custom documentation plugin(s)
+2019-10-11 15:39:27.030 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner (ApiListingReferenceScanner.java:41) - Scanning for api listing references
+2019-10-11 15:39:27.128 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator (CachingOperationNameGenerator.java:40) - Generating unique operation named: searchUsingPOST_1
+2019-10-11 15:39:27.140 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:39:27.158 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:202) - Tomcat started on port(s): 9999 (http) with context path '/zxgk-mock'
+2019-10-11 15:39:27.160 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:59) - Started ZxgkMockApplication in 2.624 seconds (JVM running for 3.185)
+2019-10-11 15:39:50.926 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:39:50.926 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:524) - Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:39:50.931 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:546) - Completed initialization in 5 ms
+2019-10-11 15:39:51.051 [http-nio-9999-exec-1] INFO  c.alibaba.druid.pool.DruidDataSource (Log4j2Impl.java:106) - {dataSource-1} inited
+2019-10-11 15:41:11.369 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 10536 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:41:11.374 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:41:12.256 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$479a82c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:41:12.452 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:41:12.462 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:41:12.471 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:41:12.471 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:41:12.559 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:41:12.559 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1149 ms
+2019-10-11 15:41:13.133 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:41:13.216 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:41:13.350 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:151) - Context refreshed
+2019-10-11 15:41:13.365 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:154) - Found 1 custom documentation plugin(s)
+2019-10-11 15:41:13.391 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner (ApiListingReferenceScanner.java:41) - Scanning for api listing references
+2019-10-11 15:41:13.495 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator (CachingOperationNameGenerator.java:40) - Generating unique operation named: searchUsingPOST_1
+2019-10-11 15:41:13.508 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:41:13.526 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:202) - Tomcat started on port(s): 9999 (http) with context path '/zxgk-mock'
+2019-10-11 15:41:13.529 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:59) - Started ZxgkMockApplication in 2.52 seconds (JVM running for 3.116)
+2019-10-11 15:41:16.152 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:41:16.152 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:524) - Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:41:16.157 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:546) - Completed initialization in 5 ms
+2019-10-11 15:41:16.280 [http-nio-9999-exec-1] INFO  c.alibaba.druid.pool.DruidDataSource (Log4j2Impl.java:106) - {dataSource-1} inited
+2019-10-11 15:42:37.924 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 3668 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:42:37.927 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:42:38.827 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cdfc6655] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:42:39.044 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:42:39.060 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:42:39.070 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:42:39.070 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:42:39.178 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:42:39.179 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1214 ms
+2019-10-11 15:42:40.025 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:42:40.122 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:42:40.279 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:151) - Context refreshed
+2019-10-11 15:42:40.296 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:154) - Found 1 custom documentation plugin(s)
+2019-10-11 15:42:40.325 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner (ApiListingReferenceScanner.java:41) - Scanning for api listing references
+2019-10-11 15:42:40.451 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator (CachingOperationNameGenerator.java:40) - Generating unique operation named: searchUsingPOST_1
+2019-10-11 15:42:40.465 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:42:40.487 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:202) - Tomcat started on port(s): 9999 (http) with context path '/zxgk-mock'
+2019-10-11 15:42:40.490 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:59) - Started ZxgkMockApplication in 2.954 seconds (JVM running for 4.684)
+2019-10-11 15:42:48.167 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:42:48.168 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:524) - Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:42:48.175 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:546) - Completed initialization in 7 ms
+2019-10-11 15:44:10.202 [http-nio-9999-exec-1] INFO  c.alibaba.druid.pool.DruidDataSource (Log4j2Impl.java:106) - {dataSource-1} inited
+2019-10-11 15:45:00.515 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:50) - Starting ZxgkMockApplication on Gumx-PC179 with PID 28044 (D:\IdeaWorkSpace\zxgk-microservices\zxgk-server\zxgk-mock\target\classes started by PingTech in D:\IdeaWorkSpace\zxgk-microservices)
+2019-10-11 15:45:00.518 [main] INFO  cn.com.pingtech.ZxgkMockApplication (SpringApplication.java:651) - The following profiles are active: dev
+2019-10-11 15:45:01.425 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$85a4b7bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-11 15:45:01.627 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:90) - Tomcat initialized with port(s): 9999 (http)
+2019-10-11 15:45:01.638 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:45:01.646 [main] INFO  o.a.catalina.core.StandardService (DirectJDKLog.java:173) - Starting service [Tomcat]
+2019-10-11 15:45:01.647 [main] INFO  o.a.catalina.core.StandardEngine (DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-11 15:45:01.737 [main] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2019-10-11 15:45:01.737 [main] INFO  o.s.web.context.ContextLoader (ServletWebServerApplicationContext.java:284) - Root WebApplicationContext: initialization completed in 1183 ms
+2019-10-11 15:45:02.328 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping (PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-11 15:45:02.411 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 15:45:02.546 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:151) - Context refreshed
+2019-10-11 15:45:02.561 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper (DocumentationPluginsBootstrapper.java:154) - Found 1 custom documentation plugin(s)
+2019-10-11 15:45:02.585 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner (ApiListingReferenceScanner.java:41) - Scanning for api listing references
+2019-10-11 15:45:02.693 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator (CachingOperationNameGenerator.java:40) - Generating unique operation named: searchUsingPOST_1
+2019-10-11 15:45:02.706 [main] INFO  o.a.coyote.http11.Http11NioProtocol (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-9999"]
+2019-10-11 15:45:02.723 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer (TomcatWebServer.java:202) - Tomcat started on port(s): 9999 (http) with context path '/zxgk-mock'
+2019-10-11 15:45:02.725 [main] INFO  cn.com.pingtech.ZxgkMockApplication (StartupInfoLogger.java:59) - Started ZxgkMockApplication in 2.626 seconds (JVM running for 3.446)
+2019-10-11 15:45:05.028 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[localhost].[/zxgk-mock] (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 15:45:05.029 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:524) - Initializing Servlet 'dispatcherServlet'
+2019-10-11 15:45:05.035 [http-nio-9999-exec-1] INFO  o.s.web.servlet.DispatcherServlet (FrameworkServlet.java:546) - Completed initialization in 6 ms
+2019-10-11 15:45:05.175 [http-nio-9999-exec-1] INFO  c.alibaba.druid.pool.DruidDataSource (Log4j2Impl.java:106) - {dataSource-1} inited

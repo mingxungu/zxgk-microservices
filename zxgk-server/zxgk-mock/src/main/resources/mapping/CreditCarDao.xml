@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.valuestore.dao.ICreditCarDao">
+	<sql id="sqlColumns">
+    	a.id,
+	    a.car_number as carNumber,
+	    a.car_number_color as carNumberColor,
+	    a.car_type as carType,
+	    a.check_type as checkType,
+	    a.credit,
+	    a.normal_pass_count as normalPassCount,
+	    a.check_pass_count as checkPassCount,
+	    a.uncheck_pass_count as uncheckPassCount,
+	    a.remarks as remarks
+    </sql>
+    
+	<select id="count" resultType="int">
+        SELECT count(1) FROM t_credit_car a
+        <where>
+        	a.status = 1
+        	<if test="page.entity.carNumberColor != null and page.entity.carNumberColor != ''">
+        		and a.car_number_color like CONCAT('%',#{page.entity.carNumberColor},'%') 
+        	</if>
+        	<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+        		and a.car_number like CONCAT('%',#{page.entity.carNumber},'%') 
+        	</if>
+        	<if test="page.entity.carType != null and page.entity.carType != ''">
+        		and a.car_type = #{page.entity.carType} 
+        	</if>
+        	<if test="page.entity.checkType != null and page.entity.checkType != ''">
+        		and a.check_type = #{page.entity.checkType}
+        	</if>
+        	<if test="page.entity.startCredit!=null">
+            	and a.credit  &gt;= #{page.entity.startCredit}
+            </if>
+            <if test="page.entity.endCredit!=null">
+            	and a.credit  &lt;= #{page.entity.endCredit}
+            </if>
+        </where>
+    </select>
+    
+    <select id="findPage" resultType="cn.com.pingtech.mock.bigdata.valuestore.entity.CreditCar">
+		SELECT <include refid="sqlColumns"/> FROM t_credit_car a
+		<where>
+			a.status = 1
+			<if test="page.entity.carNumberColor != null and page.entity.carNumberColor != ''">
+        		and a.car_number_color like CONCAT('%',#{page.entity.carNumberColor},'%') 
+        	</if>
+        	<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+        		and a.car_number like CONCAT('%',#{page.entity.carNumber},'%') 
+        	</if>
+        	<if test="page.entity.carType != null and page.entity.carType != ''">
+        		and a.car_type = #{page.entity.carType} 
+        	</if>
+        	<if test="page.entity.checkType != null and page.entity.checkType != ''">
+        		and a.check_type = #{page.entity.checkType}
+        	</if>
+        	<if test="page.entity.startCredit!=null">
+            	and a.credit  &gt;= #{page.entity.startCredit}
+            </if>
+            <if test="page.entity.endCredit!=null">
+            	and a.credit  &lt;= #{page.entity.endCredit}
+            </if>
+        </where>
+        <!-- 
+		<choose>
+			<when test="page.orderBy != null and page.orderBy != ''">
+				order by ${page.orderBy}
+			</when>
+			<otherwise>
+				order by a.update_date, a.id desc
+			</otherwise>
+		</choose>
+		 -->
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+    </select>
+    
+    <select id="findList" resultType="cn.com.pingtech.mock.bigdata.valuestore.entity.CreditCar">
+    	SELECT <include refid="sqlColumns"/> FROM t_credit_car a
+		<where>
+			a.status = 1
+			<if test="carNumberColor != null and carNumberColor != ''">
+        		and a.car_number_color like CONCAT('%',#{carNumberColor},'%') 
+        	</if>
+        	<if test="carNumber != null and carNumber != ''">
+        		and a.car_number like CONCAT('%',#{carNumber},'%') 
+        	</if>
+        	<if test="carType != null and carType != ''">
+        		and a.car_type = #{carType}
+        	</if>
+        	<if test="checkType != null and checkType != ''">
+        		and a.check_type = #{checkType}
+        	</if>
+        </where>
+    </select>
+
+</mapper>

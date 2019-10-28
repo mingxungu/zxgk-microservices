@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：CarAlongDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月15日，PingTecg：创建
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.smartanalyze.dao.ICarAlongDao">
+	<sql id="sqlColumnsModel">
+	    a.id as id,
+	    a.aCarType as aCarType,
+	    a.aCarColor as aCarColor,
+	    a.aCarNumber as aCarNumber,
+	    a.startTime as startTime,
+	    a.endTime as endTime,
+	    a.docCount as docCount
+    </sql>
+
+	<sql id="sqlColumnsGuanlian">
+    	a.id as id,
+    	a._id as _id,
+    	a.totalSimilarity as totalSimilarity,
+	    a.aCarType as aCarType,
+	    a.bCarType as bCarType,
+	    a.bCarNumber as bCarNumber,
+	    a.aCarNumber as aCarNumber,
+	    a.aCarColor as aCarColor,
+	    a.similarity as similarity,
+	    a.startTime as startTime,
+	    a.endTime as endTime,
+	    a.bCarColor as bCarColor
+    </sql>
+    
+	<select id="count" resultType="int">
+        SELECT count(1) FROM t_car_along a
+        <where>
+        	<if test="page.entity.aCarNumber != null and page.entity.aCarNumber != ''">
+        		and a.aCarNumber like CONCAT('%',#{page.entity.aCarNumber},'%')
+        	</if>
+        	<if test="page.entity.aCarType != null and page.entity.aCarType != ''">
+        		and a.aCarType = #{page.entity.aCarType}
+        	</if>
+
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+        </where>
+    </select>
+    
+    <select id="findPage" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.CarAlongVo">
+		SELECT <include refid="sqlColumnsModel"/> FROM t_car_along a
+		<where>
+			<if test="page.entity.aCarNumber != null and page.entity.aCarNumber != ''">
+				and a.aCarNumber like CONCAT('%',#{page.entity.aCarNumber},'%')
+			</if>
+			<if test="page.entity.aCarType != null and page.entity.aCarType != ''">
+				and a.aCarType = #{page.entity.aCarType}
+			</if>
+
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+    </select>
+
+	<select id="countDetail" resultType="int">
+		SELECT count(1) FROM t_car_along a
+		<where>
+			<if test="page.entity.aCarNumber != null and page.entity.aCarNumber != ''">
+				and a.aCarNumber like CONCAT('%',#{page.entity.aCarNumber},'%')
+			</if>
+			<if test="page.entity.aCarType != null and page.entity.aCarType != ''">
+				and a.aCarType = #{page.entity.aCarType}
+			</if>
+			<if test="page.entity.aCarColor != null and page.entity.aCarColor != ''">
+				and a.aCarColor = #{page.entity.aCarColor}
+			</if>
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+		</where>
+	</select>
+
+	<select id="findPageDetail" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.CarAlongVo">
+		SELECT <include refid="sqlColumnsGuanlian"/> FROM t_car_along a
+		<where>
+			<if test="page.entity.aCarNumber != null and page.entity.aCarNumber != ''">
+				and a.aCarNumber like CONCAT('%',#{page.entity.aCarNumber},'%')
+			</if>
+			<if test="page.entity.aCarType != null and page.entity.aCarType != ''">
+				and a.aCarType = #{page.entity.aCarType}
+			</if>
+			<if test="page.entity.aCarColor != null and page.entity.aCarColor != ''">
+				and a.aCarColor = #{page.entity.aCarColor}
+			</if>
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+	</select>
+
+
+</mapper>

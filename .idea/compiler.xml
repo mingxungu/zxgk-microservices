@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zxgk-api-test-simple" />
+        <module name="zxgk-api-user-simple" />
+        <module name="zxgk-boot-mysql-redis-simple" />
+        <module name="zxgk-common" />
+        <module name="zxgk-config" />
+        <module name="zxgk-config-client-simple" />
+        <module name="zxgk-eureka" />
+        <module name="zxgk-eureka-consumer-feign-simple" />
+        <module name="zxgk-eureka-consumer-ribbon-hystrix-simple" />
+        <module name="zxgk-eureka-consumer-ribbon-simple" />
+        <module name="zxgk-eureka-producer-simple" />
+        <module name="zxgk-eureka-producer-simple1" />
+        <module name="zxgk-gateway" />
+        <module name="zxgk-job" />
+        <module name="zxgk-log-elk" />
+        <module name="zxgk-mock" />
+        <module name="zxgk-nacos-config-simple" />
+        <module name="zxgk-nacos-consumer-feign-simple" />
+        <module name="zxgk-nacos-consumer-simple" />
+        <module name="zxgk-nacos-producer-simple" />
+        <module name="zxgk-nacos-producer-simple-1" />
+        <module name="zxgk-nacos-sentinel-consumer-feign-simple" />
+        <module name="zxgk-sense" />
+        <module name="zxgk-senseface" />
+        <module name="zxgk-server-monitor" />
+        <module name="zxgk-vehicle" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="zxgk-api-simple" target="1.8" />
+      <module name="zxgk-api-simple1" target="1.8" />
+      <module name="zxgk-api-test" target="1.8" />
+      <module name="zxgk-car-verify-api" target="1.8" />
+      <module name="zxgk-eureka-consumer" target="1.8" />
+      <module name="zxgk-nacos-producer-simple1" target="1.8" />
+      <module name="zxgk-open-api" target="1.8" />
+      <module name="zxgk-people-verify-api" target="1.8" />
+      <module name="zxgk-people-verify-api (1)" target="1.8" />
+      <module name="zxgk-sense" target="1.8" />
+      <module name="zxgk-server" target="1.5" />
+      <module name="zxgk-swagger-ui" target="1.7" />
+      <module name="zxgk-test-api" target="1.8" />
+      <module name="zxgksenseface" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+      <module name="zxgk-api-simple" options="-parameters" />
+      <module name="zxgk-api-simple1" options="-parameters" />
+      <module name="zxgk-api-test" options="-parameters" />
+      <module name="zxgk-api-test-simple" options="" />
+      <module name="zxgk-api-user-simple" options="" />
+      <module name="zxgk-boot-mysql-redis-simple" options="" />
+      <module name="zxgk-car-verify-api" options="-parameters" />
+      <module name="zxgk-common" options="" />
+      <module name="zxgk-config" options="" />
+      <module name="zxgk-config-client-simple" options="" />
+      <module name="zxgk-eureka" options="" />
+      <module name="zxgk-eureka-consumer" options="-parameters" />
+      <module name="zxgk-eureka-consumer-feign-simple" options="" />
+      <module name="zxgk-eureka-consumer-ribbon-hystrix-simple" options="" />
+      <module name="zxgk-eureka-consumer-ribbon-simple" options="" />
+      <module name="zxgk-eureka-producer-simple" options="" />
+      <module name="zxgk-eureka-producer-simple1" options="" />
+      <module name="zxgk-examples" options="" />
+      <module name="zxgk-gateway" options="" />
+      <module name="zxgk-job" options="" />
+      <module name="zxgk-log-elk" options="" />
+      <module name="zxgk-mock" options="" />
+      <module name="zxgk-nacos-config-simple" options="" />
+      <module name="zxgk-nacos-consumer-feign-simple" options="" />
+      <module name="zxgk-nacos-consumer-simple" options="" />
+      <module name="zxgk-nacos-producer-simple" options="" />
+      <module name="zxgk-nacos-producer-simple-1" options="" />
+      <module name="zxgk-nacos-producer-simple1" options="-parameters" />
+      <module name="zxgk-nacos-sentinel-consumer-feign-simple" options="" />
+      <module name="zxgk-open-api" options="" />
+      <module name="zxgk-people-verify-api" options="-parameters" />
+      <module name="zxgk-people-verify-api (1)" options="-parameters" />
+      <module name="zxgk-sense" options="-parameters" />
+      <module name="zxgk-senseface" options="" />
+      <module name="zxgk-server" options="-parameters" />
+      <module name="zxgk-server-monitor" options="" />
+      <module name="zxgk-swagger-ui" options="-parameters" />
+      <module name="zxgk-test-api" options="-parameters" />
+      <module name="zxgk-vehicle" options="" />
+      <module name="zxgksenseface" options="-parameters" />
+    </option>
+  </component>
+</project>

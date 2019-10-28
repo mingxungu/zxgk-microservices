@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：PeopleValueDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月12日，PingTech：创建
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.dao.IUserDao">
+	<sql id="sqlColumns">
+    	a.id,
+	    a.name,
+	    a.age,
+	    a.sex
+    </sql>
+
+    
+    <select id="findList" resultType="cn.com.pingtech.entity.User">
+    	SELECT <include refid="sqlColumns"/> FROM t_user a
+    </select>
+
+</mapper>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：ICarLineDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月17日，PingTecg：创建
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.smartanalyze.dao.ICarLineDao">
+	<sql id="sqlColumns">
+		a.id,
+	    a.checkPeopleCount as checkPeopleCount,
+	    a.carBrand as carBrand,
+	    a.bodyColor as bodyColor,
+	    a.captureImage as captureImage,
+	    a.checkPeopleTimes as checkPeopleTimes,
+	    a.sum_doc_night as sum_doc_night,
+	    a.carNumber as carNumber,
+	    a.carColor as carColor,
+	    a.carType as carType,
+	    a.peopleWarnCount as peopleWarnCount,
+	    a.passRegionCount as passRegionCount,
+	    a.carWarnCount as carWarnCount,
+	    a.carPassCount as carPassCount,
+	    a.tag as tag,
+	    a.checkMsg as checkMsg,
+	    a.nightHourEnd as nightHourEnd,
+	    a.nightHourStart as nightHourStart,
+	    a.nightPassCount as nightPassCount,
+	    a.nightPassPerc as nightPassPerc,
+	    a.playRole as playRole,
+	    a.playRoleLabel as playRoleLabel
+    </sql>
+	<sql id="getPassPeopleRecord">
+    	a.id as "id",
+    	a._id as "_id",
+    	a.tag as "tag",
+    	a.car_id as "carId",
+    	a.car_number as "carNumber",
+		a.car_color as "carColor",
+        a.name as "name",
+        a.id_number as "idnumber",
+        a.sex as "sex",
+        a.nation as "nation",
+        a.birthday as "birthday",
+        a.address as "address",
+        a.capture_image as captureImage,
+       	a.certificate_image as certificateImage,
+        a.pass_time as "passtime",
+        a.check_region as "checkRegion",
+        a.check_status as "checkstatus",
+        a.comparison_result as "comparisonresult",
+        a.comparison_similarity as "comparisonsimilarity",
+        a.check_msg as "checkMsg",
+		a.check_msg_max as "checkMsgMax",
+        a.origin as "origin",
+        a.deal_status as "dealStatus",
+		a.deal_result as "dealResult",
+		a.deal_remark as "dealRemark",
+        a.from_warn as fromWarn,
+        a.from_passlog as fromPasslog,
+        a.check_color as checkColor,
+        a.person_type as peopleType,
+        a.black_source as blackSource,
+        a.check_color_max as checkColorMax,
+        a.issuing_authority as issuingAuthority,
+		a.valid_start_time as validStartTime,
+		a.valid_end_time as validEndTime,
+		a.warner_phone as warnerPhone,
+		a.jsinfo as jsInfo
+    </sql>
+
+	<sql id="getPassCarRecord">
+		a.pass_time as passTime,
+		a.tag as tag,
+		a.check_region as checkRegion,
+		a.pass_text as passText,
+		a.check_msg as checkMsg,
+		a.deal_status as dealStatus,
+		a.id as id,
+		a.car_number as carNumber,
+		a.car_color as carColor,
+		a.car_type as carType,
+		a.check_msg as checkMsg,
+		a.origin as origin,
+		a.check_status as checkStatus,
+		a.capture_image as captureImage,
+		a.create_date as createDate,
+		a.remarks as remarks,
+		a.deal_result as dealResult,
+		a.deal_remark as dealRemark,
+		a.from_warn as fromWarn,
+		a.check_color as checkColor,
+		a.time_consuming as timeConsuming,
+		a.car_type_extend as carTypeExtend,
+		a.check_type as checkType,
+		a.pass_advise as passAdvise,
+		a.credit as credit,
+		a.black_source as blackSource,
+		a.driver_name as driverName,
+		a.driver_id_number as driverIdNumber,
+		a.verify_status as verifyStatus,
+		a.province as province
+	</sql>
+	<sql id="getCarInfoBean">
+		a.car_number as carNumber,
+		a.car_color as carColor,
+		a.car_type as carType,
+		a.body_color as bodyColor,
+		a.main_brand as carBrand,
+		a.capture_image as captureImage,
+		a.tag as tag
+	</sql>
+	<sql id="getcoordinat">
+		a.warn_level as warmLever,
+		a.check_color as checkColor,
+		a.pass_time as x,
+		a.tag as y,
+		a.id
+	</sql>
+
+	<select id="count" resultType="int">
+        SELECT count(1) FROM t_car_line a
+        <where>
+			1=1
+			<if test="page.entity.passTimeStart != null and page.entity.passTimeStart != ''">
+				and a.passTime &gt;= #{page.entity.passTimeStart}
+			</if>
+			<if test="page.entity.passTimeEnd != null and page.entity.passTimeEnd != ''">
+				and a.passTime &lt;= #{page.entity.passTimeEnd}
+			</if>
+			<if test="page.entity.bodyColor != null and page.entity.bodyColor != ''">
+				and a.bodyColor = #{page.entity.bodyColor}
+			</if>
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.carNumber LIKE CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+			<if test="page.entity.carPassCount != null and page.entity.carPassCount != ''">
+				and a.carPassCount = #{page.entity.carPassCount}
+			</if>
+			<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.carType = #{page.entity.carType}
+			</if>
+			<if test="page.entity.checkMsg != null and page.entity.checkMsg != ''">
+				and a.checkMsg LIKE CONCAT('%',#{page.entity.checkMsg},'%')
+			</if>
+			<if test="page.entity.nightHourStart != null and page.entity.nightHourStart != ''">
+				and a.nightHourStart &gt;= #{page.entity.nightHourStart}
+			</if>
+			<if test="page.entity.nightHourEnd != null and page.entity.nightHourEnd != ''">
+				and a.nightHourEnd &lt;= #{page.entity.nightHourEnd}
+			</if>
+			<if test="page.entity.nightPassCount != null and page.entity.nightPassCount != ''">
+				and a.nightPassCount = #{page.entity.nightPassCount}
+			</if>
+			<if test="page.entity.nightPassPerc != null and page.entity.nightPassPerc != ''">
+				and a.nightPassPerc = #{page.entity.nightPassPerc}
+			</if>
+			<if test="page.entity.playRole != null and page.entity.playRole != ''">
+				and a.playRole = #{page.entity.playRole}
+			</if>
+			<if test="page.entity.playRoleLabel != null and page.entity.playRoleLabel != ''">
+				and a.playRoleLabel = #{page.entity.playRoleLabel}
+			</if>
+
+        </where>
+    </select>
+
+    <select id="findPage" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.entity.CarLineVo">
+		SELECT <include refid="sqlColumns"/> FROM t_car_line a
+		<where>
+			1=1
+			<if test="page.entity.passTimeStart != null and page.entity.passTimeStart != ''">
+				and a.passTime &gt;= #{page.entity.passTimeStart}
+			</if>
+			<if test="page.entity.passTimeEnd != null and page.entity.passTimeEnd != ''">
+				and a.passTime &lt;= #{page.entity.passTimeEnd}
+			</if>
+			<if test="page.entity.bodyColor != null and page.entity.bodyColor != ''">
+				and a.bodyColor = #{page.entity.bodyColor}
+			</if>
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.carNumber  LIKE CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+			<if test="page.entity.carPassCount != null and page.entity.carPassCount != ''">
+				and a.carPassCount = #{page.entity.carPassCount}
+			</if>
+			<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.carType = #{page.entity.carType}
+			</if>
+			<if test="page.entity.checkMsg != null and page.entity.checkMsg != ''">
+				and a.checkMsg LIKE CONCAT('%',#{page.entity.checkMsg},'%')
+			</if>
+			<if test="page.entity.nightHourStart != null and page.entity.nightHourStart != ''">
+				and a.nightHourStart &gt;= #{page.entity.nightHourStart}
+			</if>
+			<if test="page.entity.nightHourEnd != null and page.entity.nightHourEnd != ''">
+				and a.nightHourEnd &lt;= #{page.entity.nightHourEnd}
+			</if>
+			<if test="page.entity.nightPassCount != null and page.entity.nightPassCount != ''">
+				and a.nightPassCount = #{page.entity.nightPassCount}
+			</if>
+			<if test="page.entity.nightPassPerc != null and page.entity.nightPassPerc != ''">
+				and a.nightPassPerc = #{page.entity.nightPassPerc}
+			</if>
+			<if test="page.entity.playRole != null and page.entity.playRole != ''">
+				and a.playRole = #{page.entity.playRole}
+			</if>
+			<if test="page.entity.playRoleLabel != null and page.entity.playRoleLabel != ''">
+				and a.playRoleLabel = #{page.entity.playRoleLabel}
+			</if>
+
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+    </select>
+	<select id="countPeople" resultType="java.lang.Integer">
+		SELECT count(1) FROM t_passlog_people a
+		<where>
+			1=1
+			<if test="page.entity.passTimeStart != null and page.entity.passTimeStart != ''">
+				and a.pass_time &gt;= #{page.entity.passTimeStart}
+			</if>
+			<if test="page.entity.passTimeEnd != null and page.entity.passTimeEnd != ''">
+				and a.pass_time &lt;= #{page.entity.passTimeEnd}
+			</if>
+			<if test="page.entity.carColor != null and page.entity.carColor != ''">
+				and a.car_color = #{page.entity.carColor}
+			</if>
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.car_number LIKE CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+		</where>
+	</select>
+	<select id="findPagePeople" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.WarnPeopleExportVo">
+		select <include refid="getPassPeopleRecord"/> from t_passlog_people a
+		<where>
+			1=1
+			<if test="page.entity.passTimeStart != null and page.entity.passTimeStart != ''">
+				and a.pass_time &gt;= #{page.entity.passTimeStart}
+			</if>
+			<if test="page.entity.passTimeEnd != null and page.entity.passTimeEnd != ''">
+				and a.pass_time &lt;= #{page.entity.passTimeEnd}
+			</if>
+			<if test="page.entity.carColor != null and page.entity.carColor != ''">
+				and a.car_color = #{page.entity.carColor}
+			</if>
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.car_number LIKE CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+	</select>
+
+	<select id="countCar" resultType="java.lang.Integer">
+		SELECT count(1) FROM t_passlog_car a
+		<where>
+			1=1
+			<if test="page.entity.passTimeStart != null and page.entity.passTimeStart != ''">
+				and a.pass_time &gt;= #{page.entity.passTimeStart}
+			</if>
+			<if test="page.entity.passTimeEnd != null and page.entity.passTimeEnd != ''">
+				and a.pass_time &lt;= #{page.entity.passTimeEnd}
+			</if>
+			<if test="page.entity.carColor != null and page.entity.carColor != ''">
+				and a.car_color = #{page.entity.carColor}
+			</if>
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.car_number LIKE CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+		</where>
+	</select>
+	<select id="findPageCar" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.WarnCarExportVo">
+		select <include refid="getPassCarRecord"/> from t_passlog_car a
+		<where>
+			<if test="page.entity.passTimeStart != null and page.entity.passTimeStart != ''">
+				and a.pass_time &gt;= #{page.entity.passTimeStart}
+			</if>
+			<if test="page.entity.passTimeEnd != null and page.entity.passTimeEnd != ''">
+				and a.pass_time &lt;= #{page.entity.passTimeEnd}
+			</if>
+			<if test="page.entity.carColor != null and page.entity.carColor != ''">
+				and a.car_color = #{page.entity.carColor}
+			</if>
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.car_number LIKE CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+			<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.car_type LIKE CONCAT('%',#{page.entity.carType},'%')
+			</if>
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+	</select>
+	<select id="findCoordinateInfoBean" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.CoordinateInfoBean">
+		select <include refid="getcoordinat"/> from t_passlog_car a
+		<where>
+			1=1
+			<if test="passTimeStart != null and passTimeStart != ''">
+				and a.pass_time &gt;= #{passTimeStart}
+			</if>
+			<if test="passTimeEnd != null and passTimeEnd != ''">
+				and a.pass_time &lt;= #{passTimeEnd}
+			</if>
+			<if test="carColor != null and carColor != ''">
+				and a.car_color = #{carColor}
+			</if>
+			<if test="carNumber != null and carNumber != ''">
+				and a.car_number LIKE CONCAT('%',#{carNumber},'%')
+			</if>
+		</where>
+	</select>
+	<select id="findCarInfoBean" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.CarInfoBean">
+		select <include refid="getCarInfoBean"/> from t_passlog_car a
+		<where>
+			1=1
+			<if test="passTimeStart != null and passTimeStart != ''">
+				and a.pass_time &gt;= #{passTimeStart}
+			</if>
+			<if test="passTimeEnd != null and passTimeEnd != ''">
+				and a.pass_time &lt;= #{passTimeEnd}
+			</if>
+			<if test="carColor != null and carColor != ''">
+				and a.car_color = #{carColor}
+			</if>
+			<if test="carNumber != null and carNumber != ''">
+				and a.car_number LIKE CONCAT('%',#{carNumber},'%')
+			</if>
+		</where>
+	</select>
+</mapper>

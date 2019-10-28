@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-job" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-log-elk" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-server-monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-server/zxgk-senseface" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：PeopleValueDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月12日，PingTech：创建
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.valuestore.dao.IPeopleValueDao">
+	<sql id="sqlColumns">
+    	a.id,
+    	a.idnumber,
+	    a.name,
+	    a.passCount,
+	    a.fromWarnCount,
+	    a.carCount,
+	    a.imsiCount,
+	    a.alongPeopleCount,
+	    a.detail
+    </sql>
+    
+	<select id="count" resultType="int">
+        SELECT count(1) FROM t_people_value a
+        <where>
+        	<if test="page.entity.idnumber != null and page.entity.idnumber != ''">
+        		and a.idnumber like CONCAT('%',#{page.entity.idnumber},'%')
+        	</if>
+			<if test="page.entity.name != null and page.entity.name != ''">
+				and a.name like CONCAT('%',#{page.entity.name},'%')
+			</if>
+        </where>
+    </select>
+    
+    <select id="findPage" resultType="cn.com.pingtech.mock.bigdata.valuestore.entity.PeopleValue">
+		SELECT <include refid="sqlColumns"/> FROM t_people_value a
+		<where>
+			<if test="page.entity.idnumber != null and page.entity.idnumber != ''">
+				and a.idnumber like CONCAT('%',#{page.entity.idnumber},'%')
+			</if>
+			<if test="page.entity.name != null and page.entity.name != ''">
+				and a.name like CONCAT('%',#{page.entity.name},'%')
+			</if>
+        </where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+    </select>
+    
+    <select id="findList" resultType="cn.com.pingtech.mock.bigdata.valuestore.entity.PeopleValue">
+    	SELECT <include refid="sqlColumns"/> FROM t_people_value a
+		<where>
+			<if test="page.entity.idnumber != null and page.entity.idnumber != ''">
+				and a.idnumber like CONCAT('%',#{page.entity.idnumber},'%')
+			</if>
+			<if test="page.entity.name != null and page.entity.name != ''">
+				and a.name like CONCAT('%',#{page.entity.name},'%')
+			</if>
+        </where>
+    </select>
+
+	<select id="detail" resultType="cn.com.pingtech.mock.bigdata.valuestore.entity.PeopleValue">
+		SELECT <include refid="sqlColumns"/> FROM t_people_value a
+		<where>
+			<if test="idnumber != null and idnumber != ''">
+				and a.idnumber like CONCAT('%',#{idnumber},'%')
+			</if>
+		</where>
+	</select>
+
+</mapper>

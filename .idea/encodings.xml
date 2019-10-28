@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-api-test-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-api-user-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-boot-mysql-redis-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-config-client-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-eureka-consumer-feign-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-eureka-consumer-ribbon-hystrix-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-eureka-consumer-ribbon-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-eureka-producer-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-eureka-producer-simple1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-nacos-config-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-nacos-consumer-feign-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-nacos-consumer-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-nacos-producer-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-nacos-producer-simple-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-examples/zxgk-nacos-sentinel-consumer-feign-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-job" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-log-elk" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-open-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-server-monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-server/zxgk-mock" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-server/zxgk-senseface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zxgk-server/zxgk-vehicle" charset="UTF-8" />
+  </component>
+</project>

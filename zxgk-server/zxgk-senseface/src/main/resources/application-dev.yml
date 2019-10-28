@@ -1,0 +1,12 @@
+#项目自定义配置
+
+#商汤静态库服务配置
+senseFace.static.service.url: http://10.10.12.72:8080/wangan-api
+#人脸核查静态库Id
+senseFace.static.db_id_check: 2
+#人脸登录静态库Id
+senseFace.static.db_id_login: 1
+#人脸核查比中  阈值
+senseFace.static.score: 0.75
+#商汤核查比对人员基本信息查询接口
+senseFace.person.query: http://10.10.12.72:8080/wangan-api/

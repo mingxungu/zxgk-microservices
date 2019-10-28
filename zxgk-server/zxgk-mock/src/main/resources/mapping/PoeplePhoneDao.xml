@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：PoeplePhoneDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月15日，PingTecg：创建
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.smartanalyze.dao.IPeoplePhoneDao">
+	<sql id="sqlColumnsModel">
+	    a.carCount as carCount,
+	    a.phoneCodeCount as phoneCodeCount,
+	    a.carPassCount as carPassCount,
+	    a.phoneCodeRecordCount as phoneCodeRecordCount,
+	    a.modelRunTime as modelRunTime,
+	    a.carChart as carChart,
+	    a.phoneCodeChart as phoneCodeChart
+    </sql>
+
+	<sql id="sqlColumnsGuanlian">
+    	a.id,
+    	a._id as _id,
+	    a.idNumber as idNumber,
+	    a.peopleName as peopleName,
+	    a.phoneCodeCount as phoneCodeCount,
+	    a.startTime as startTime,
+	    a.endTime as endTime,
+	    a.minSimilarity as minSimilarity,
+	    a.imsi as imsi,
+	    a.imei as imei,
+	    a.similarity as similarity,
+	    a.count as count
+    </sql>
+
+    <sql id="sqlPeoplePhoneChartDetail">
+        a._id as _id,
+        a.color as color,
+        a.startTime as x,
+        a.type as type,
+        a.tag as y
+    </sql>
+	<sql id="sqlColumnsPeople">
+		a.pass_time as passtime,
+		a.tag as tagName,
+		a.check_msg as checkMsg,
+		a.deal_status as dealStatus
+	</sql>
+	<sql id="sqlColumnsPhone">
+		a.startTime as gatherTime,
+		a.tag as tagName,
+		a.operationDepartment as operationDepartment
+	</sql>
+    
+	<select id="count" resultType="int">
+        SELECT count(1) FROM t_people_phone a
+        <where>
+			1=1
+        	<if test="page.entity.idNumber != null and page.entity.idNumber != ''">
+        		and a.idNumber like CONCAT('%',#{page.entity.idNumber},'%')
+        	</if>
+			<if test="page.entity.peopleId != null and page.entity.peopleId != ''">
+				and a.idNumber like CONCAT('%',#{page.entity.peopleId},'%')
+			</if>
+        	<if test="page.entity.peopleName != null and page.entity.peopleName != ''">
+        		and a.peopleName = #{page.entity.peopleName}
+        	</if>
+
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+        </where>
+    </select>
+    
+    <select id="findPage" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.entity.PeoplePhone">
+		SELECT <include refid="sqlColumnsGuanlian"/> FROM t_people_phone a
+		<where>
+            1=1
+			<if test="page.entity.idNumber != null and page.entity.idNumber != ''">
+				and a.idNumber like CONCAT('%',#{page.entity.idNumber},'%')
+			</if>
+			<if test="page.entity.peopleId != null and page.entity.peopleId != ''">
+				and a.idNumber like CONCAT('%',#{page.entity.peopleId},'%')
+			</if>
+			<if test="page.entity.peopleName != null and page.entity.peopleName != ''">
+				and a.peopleName = #{page.entity.peopleName}
+			</if>
+
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+    </select>
+
+
+    <select id="findList" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.entity.PeoplePhone">
+    	SELECT <include refid="sqlColumnsModel"/> FROM t_people_phone a
+		<where>
+			1=1
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.carNumber like CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+			<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.carType = #{page.entity.carType}
+			</if>
+
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+		</where>
+    </select>
+
+	<select id="staticCount" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.PeoplePhoneCountVo">
+		select count(1) as codeCount ,count(idNumber) as peopleCount, SUM(phoneCodeCount) as peopleCodeCount from t_people_phone a
+
+	</select>
+
+	<select id="chart" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.PeoplePhoneChartVo">
+		select minSimilarity as similarity ,count(idNumber) as peopleCount, SUM(phoneCodeCount) as imsiCount from t_people_phone a
+		group by a.minSimilarity
+
+	</select>
+	<select id="topChart" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.PeoplePhoneTopChartVo">
+		select imsi_list as imsiList ,people_list as peopleList from t_people_phone_chart
+	</select>
+	<select id="listTable" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.PeoplePhoneTableVo">
+		select count_list as countList ,similarity_list as similarityList from t_people_phone_chart
+	</select>
+    <select id="recordsDetailChart"
+            resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.PeoplePhoneExportChartVo">
+        select <include refid="sqlPeoplePhoneChartDetail"/> from t_people_phone a
+        <where>
+            1=1
+            <if test="peopleId != null and peopleId != ''">
+                and a.idNumber like CONCAT('%',#{peopleId},'%')
+            </if>
+            <if test="startTime != null and startTime != ''">
+                and a.startTime &gt;= #{startTime}
+            </if>
+            <if test="endTime != null and endTime != ''">
+                and a.endTime &lt;= #{endTime}
+            </if>
+            <if test="imsi != null and imsi != ''">
+                and a.imsi like CONCAT('%',#{imsi},'%')
+            </if>
+        </where>
+    </select>
+	<select id="recordsDetailPeople"
+			resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.WarnPeopleExportVo">
+		SELECT <include refid="sqlColumnsPeople"/> FROM t_passlog_people a
+		<where>
+			1=1
+			<if test="page.entity.idnumber != null and page.entity.idnumber != ''">
+				and a.id_number like CONCAT('%',#{page.entity.idnumber},'%')
+			</if>
+			<if test="page.entity.passTimeStart != null and page.entity.passTimeStart != ''">
+				and a.pass_time &gt;= #{page.entity.passTimeStart}
+			</if>
+			<if test="page.entity.passTimeEnd != null and page.entity.passTimeEnd != ''">
+				and a.pass_time &lt;= #{page.entity.passTimeEnd}
+			</if>
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+	</select>
+	<select id="countPeople" resultType="java.lang.Integer">
+		SELECT count(1) FROM t_passlog_people a
+		<where>
+			1=1
+			<if test="page.entity.idnumber != null and page.entity.idnumber != ''">
+				and a.id_number like CONCAT('%',#{page.entity.idnumber},'%')
+			</if>
+			<if test="page.entity.passTimeStart != null and page.entity.passTimeStart != ''">
+				and a.pass_time &gt;= #{page.entity.passTimeStart}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+		</where>
+	</select>
+	<select id="recordsDetailPhone" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.entity.DetectPhone">
+		SELECT <include refid="sqlColumnsPhone"/> FROM t_people_phone a
+		<where>
+			1=1
+			<if test="page.entity.imsi != null and page.entity.imsi != ''">
+				and a.imsi like CONCAT('%',#{page.entity.imsi},'%')
+			</if>
+			<if test="page.entity.gatherTimeStart != null and page.entity.gatherTimeStart != ''">
+				and a.startTime &gt;= #{page.entity.gatherTimeStart}
+			</if>
+			<if test="page.entity.gatherTimeEnd != null and page.entity.gatherTimeEnd != ''">
+				and a.startTime &lt;= #{page.entity.gatherTimeEnd}
+			</if>
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+	</select>
+	<select id="countPhone" resultType="java.lang.Integer">
+		select count(1) from t_people_phone a
+		<where>
+			1=1
+			<if test="page.entity.imsi != null and page.entity.imsi != ''">
+				and a.imsi like CONCAT('%',#{page.entity.imsi},'%')
+			</if>
+			<if test="page.entity.gatherTimeStart != null and page.entity.gatherTimeStart != ''">
+				and a.startTime &gt;= #{page.entity.gatherTimeStart}
+			</if>
+			<if test="page.entity.gatherTimeEnd != null and page.entity.gatherTimeEnd != ''">
+				and a.startTime &lt;= #{page.entity.gatherTimeEnd}
+			</if>
+		</where>
+	</select>
+
+</mapper>

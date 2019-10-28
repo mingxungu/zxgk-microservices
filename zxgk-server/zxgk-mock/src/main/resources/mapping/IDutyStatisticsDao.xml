@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：IDutyStatisticsDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月21日，PingTech：创建
+  -->
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.duty.dao.IDutyStatisticsDao">
+    <select id="queryDutyStatisticsTagList" resultType="cn.com.pingtech.mock.bigdata.duty.vo.DutyStatisticsTagVo">
+        select
+            tag,
+            sum(passTotal) passTotal,
+            sum(hcTotal) hcTotal,
+            sum(qxcTotal) qxcTotal,
+            sum(qxcHcTotal) qxcHcTotal,
+            convert(sum(qxcHcTotal)*100/sum(qxcTotal),decimal(5,2)) qxchcRate,
+            sum(qtcTotal) qtcTotal,
+            sum(qtcHcTotal) qtcHcTotal,
+            convert(sum(qtcHcTotal)*100/sum(qtcTotal),decimal(5,2)) qtchcRate
+        from duty_statistics
+        where 1=1
+        <if test="passTimeStart != null and passTimeStart != ''">
+            and passTime &gt;= concat(#{passTimeStart},' 00:00:00')
+        </if>
+        <if test="passTimeEnd != null and passTimeEnd != ''">
+            and passTime &lt;= concat(#{passTimeEnd},' 23:59:59')
+        </if>
+        <if test="tag != null and tag != ''">
+            and tag = #{tag}
+        </if>
+        group by tag
+        order by tag
+    </select>
+
+    <select id="queryDutyStatisticsHj" resultType="cn.com.pingtech.mock.bigdata.duty.vo.DutyStatisticsHjVo">
+        select
+        tag,
+        sum(passTotal) passTotalHj,
+        sum(hcTotal) hcTotalHj,
+        sum(qxcTotal) qxcTotalHj,
+        sum(qxcHcTotal) qxcHcTotalHj,
+        convert(sum(qxcHcTotal)*100/sum(qxcTotal),decimal(5,2)) qxchcRateHj,
+        sum(qtcTotal) qtcTotalHj,
+        sum(qtcHcTotal) qtcHcTotalHj,
+        convert(sum(qtcHcTotal)*100/sum(qtcTotal),decimal(5,2)) qtchcRateHj
+        from duty_statistics
+        where 1=1
+        <if test="passTimeStart != null and passTimeStart != ''">
+            and passTime &gt;= concat(#{passTimeStart},' 00:00:00')
+        </if>
+        <if test="passTimeEnd != null and passTimeEnd != ''">
+            and passTime &lt;= concat(#{passTimeEnd},' 23:59:59')
+        </if>
+        <if test="tag != null and tag != ''">
+            and tag = #{tag}
+        </if>
+    </select>
+</mapper>

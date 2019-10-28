@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：CarAlonggjtDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月15日，PingTecg：创建
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.smartanalyze.dao.ICarAlonggjtDao">
+	<sql id="sqlColumnsModel">
+	    a._id as _id,
+	    a.color as color,
+	    a.x as x,
+	    a.y as y,
+	    a.carNumber as carNumber,
+	    a.type as type
+    </sql>
+    
+	<select id="count" resultType="int">
+        SELECT count(1) FROM t_car_along_gjt a
+        <where>
+        	<if test="page.entity.bCarType != null and page.entity.bCarType != ''">
+        		and a.bCarType like CONCAT('%',#{page.entity.bCarType},'%')
+        	</if>
+			<if test="page.entity.bCarColor != null and page.entity.bCarColor != ''">
+				and a.bCarColor = #{page.entity.bCarColor}
+			</if>
+			<if test="page.entity.bCarNumber != null and page.entity.bCarNumber != ''">
+				and a.bCarNumber like CONCAT('%',#{page.entity.bCarNumber},'%')
+			</if>
+			<if test="page.entity.aCarType != null and page.entity.aCarType != ''">
+				and a.aCarType like CONCAT('%',#{page.entity.aCarType},'%')
+			</if>
+			<if test="page.entity.aCarColor != null and page.entity.aCarColor != ''">
+				and a.aCarColor = #{page.entity.aCarColor}
+			</if>
+			<if test="page.entity.aCarNumber != null and page.entity.aCarNumber != ''">
+				and a.aCarNumber like CONCAT('%',#{page.entity.aCarNumber},'%')
+			</if>
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+        </where>
+    </select>
+    
+    <select id="findPage" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.CarAlonggjtVo">
+		SELECT <include refid="sqlColumnsModel"/> FROM t_car_along_gjt a
+		<where>
+			<if test="page.entity.bCarType != null and page.entity.bCarType != ''">
+				and a.bCarType like CONCAT('%',#{page.entity.bCarType},'%')
+			</if>
+			<if test="page.entity.bCarColor != null and page.entity.bCarColor != ''">
+				and a.bCarColor = #{page.entity.bCarColor}
+			</if>
+			<if test="page.entity.bCarNumber != null and page.entity.bCarNumber != ''">
+				and a.bCarNumber like CONCAT('%',#{page.entity.bCarNumber},'%')
+			</if>
+			<if test="page.entity.aCarType != null and page.entity.aCarType != ''">
+				and a.aCarType like CONCAT('%',#{page.entity.aCarType},'%')
+			</if>
+			<if test="page.entity.aCarColor != null and page.entity.aCarColor != ''">
+				and a.aCarColor = #{page.entity.aCarColor}
+			</if>
+			<if test="page.entity.aCarNumber != null and page.entity.aCarNumber != ''">
+				and a.aCarNumber like CONCAT('%',#{page.entity.aCarNumber},'%')
+			</if>
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+    </select>
+
+</mapper>

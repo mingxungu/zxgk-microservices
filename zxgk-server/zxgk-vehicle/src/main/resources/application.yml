@@ -1,0 +1,6 @@
+#访问端口
+server.port: 8201
+#访问路径
+server.servlet.context-path: /zxgk-vehicle
+#切换配置文件
+spring.profiles.active: prod

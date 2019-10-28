@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (c) 2017-2019 www.pingtech.com.cn. All rights reserved
+  ~ 注意：本内容仅限于品恩内部传阅，禁止外泄以及用于其他的商业目的
+  ~
+  ~ 项目名称：zxgk-microservices
+  ~ 文件名称：BlankCarDao.xml
+  ~ 修改记录：
+  ~ 1.2019年10月12日，PingTech：创建
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pingtech.mock.bigdata.smartanalyze.dao.IVehiclePhoneDao">
+	<sql id="sqlColumnsModel">
+	    a.carCount as carCount,
+	    a.phoneCodeCount as phoneCodeCount,
+	    a.carPassCount as carPassCount,
+	    a.phoneCodeRecordCount as phoneCodeRecordCount,
+	    a.modelRunTime as modelRunTime,
+	    a.carChart as carChartList,
+	    a.phoneCodeChart as phoneCodeChartList
+    </sql>
+	<sql id="sqlColumnsGuanlian">
+    	a.id,
+	    a.carNumber as carNumber,
+	    a.carColor as carColor,
+	    a.carType as carType,
+	    a.phoneCodeCount as phoneCodeCount,
+	    a.startTime as startTime,
+	    a.endTime as endTime,
+	    a.minSimilarity as minSimilarity
+    </sql>
+	<sql id="sqlColumnsDetail">
+    	a.id,
+	    a.carNumber as carNumber,
+	    a.carColor as carColor,
+	    a.carType as carType,
+	    a.startTime as startTime,
+	    a.endTime as endTime,
+	    a.similarity as similarity,
+	    a.imei as imei,
+	    a.imsi as imsi
+    </sql>
+	<sql id="fgtColumsDetail">
+		a.startTime as x,
+		a.tag as y,
+		a.type as type
+	</sql>
+
+
+    <select id="findList" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.VehiclePhoneResponse">
+    	SELECT <include refid="sqlColumnsModel"/> FROM t_vehicle_phone_model a
+		<where>
+			1=1
+			<if test="carNumber != null and carNumber != ''">
+				and a.carNumber like CONCAT('%',#{carNumber},'%')
+			</if>
+			<if test="carType != null and carType != ''">
+				and a.carType = #{carType}
+			</if>
+			<if test="startTime != null and startTime != ''">
+				and a.startTime &gt;= #{startTime}
+			</if>
+			<if test="endTime != null and endTime != ''">
+				and a.endTime &lt;= #{endTime}
+			</if>
+
+		</where>
+    </select>
+
+
+	<select id="count" resultType="int">
+		SELECT count(1) FROM t_vehicle_phone a
+		<where>
+			1=1
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.carNumber like CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+			<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.carType = #{page.entity.carType}
+			</if>
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+		</where>
+	</select>
+
+
+	<select id="findPage" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.entity.VehiclePhone">
+		SELECT <include refid="sqlColumnsGuanlian"/> FROM t_vehicle_phone a
+		<where>
+			1=1
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.carNumber like CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+			<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.carType = #{page.entity.carType}
+			</if>
+			<if test="page.entity.minSimilarity != null and page.entity.minSimilarity != ''">
+				and a.minSimilarity = #{page.entity.minSimilarity}
+			</if>
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+	</select>
+
+    <select id="countDetail" resultType="java.lang.Integer">
+		select  count(1) from t_vehicle_phone_asso a
+		<where>
+			1=1
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.carNumber like CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+			<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.carType = #{page.entity.carType}
+			</if>
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+		</where>
+	</select>
+	<select id="findPageDetail" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.DetailResponse">
+		SELECT <include refid="sqlColumnsDetail"/> FROM t_vehicle_phone_asso a
+		<where>
+			1=1
+			<if test="page.entity.carNumber != null and page.entity.carNumber != ''">
+				and a.carNumber like CONCAT('%',#{page.entity.carNumber},'%')
+			</if>
+			<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.carType = #{page.entity.carType}
+			</if>
+			<if test="page.entity.startTime != null and page.entity.startTime != ''">
+				and a.startTime &gt;= #{page.entity.startTime}
+			</if>
+			<if test="page.entity.endTime != null and page.entity.endTime != ''">
+				and a.endTime &lt;= #{page.entity.endTime}
+			</if>
+
+		</where>
+		LIMIT ${(page.pageNo-1)*page.pageSize},${page.pageSize}
+	</select>
+	<select id="detailfbt" resultType="cn.com.pingtech.mock.bigdata.smartanalyze.vo.Arr">
+		select <include refid="fgtColumsDetail"/> from t_vehicle_phone_asso a
+		<where>
+			1=1
+			<if test="carNumber != null and carNumber != ''">
+				and a.carNumber like CONCAT('%',#{carNumber},'%')
+			</if>
+			<!--<if test="page.entity.carType != null and page.entity.carType != ''">
+				and a.carType = #{page.entity.carType}
+			</if>-->
+			<if test="startTime != null and startTime != ''">
+				and a.startTime &gt;= #{startTime}
+			</if>
+			<if test="endTime != null and endTime != ''">
+				and a.endTime &lt;= #{endTime}
+			</if>
+
+		</where>
+	</select>
+
+</mapper>

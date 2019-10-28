@@ -1,0 +1,10 @@
+#artemis网关服务器ip
+artemis.host: 10.10.15.82
+#秘钥appkey
+artemis.appKey: 25791770
+#秘钥appSecret
+artemis.appSecret: aAuScDNHYaXnpqn0SZth
+#车辆识别卡口id
+vehicleData.crossingId: 2
+#车辆识别时间（单位：ms）
+vehicleData.recognizeTime: 4000

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>zxgk-parent</artifactId>
+        <groupId>cn.com.pingtech</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.com.pingtech</groupId>
+    <artifactId>zxgk-examples</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>zxgk-boot-mysql-redis-simple</module>
+        <module>zxgk-nacos-sentinel-consumer-feign-simple</module>
+        <module>zxgk-nacos-config-simple</module>
+        <module>zxgk-nacos-producer-simple-1</module>
+        <module>zxgk-nacos-producer-simple</module>
+        <module>zxgk-nacos-consumer-simple</module>
+        <module>zxgk-nacos-consumer-feign-simple</module>
+        <module>zxgk-eureka-producer-simple</module>
+        <module>zxgk-eureka-producer-simple1</module>
+        <module>zxgk-eureka-consumer-ribbon-simple</module>
+        <module>zxgk-eureka-consumer-feign-simple</module>
+        <module>zxgk-eureka-consumer-ribbon-hystrix-simple</module>
+        <module>zxgk-config-client-simple</module>
+        <module>zxgk-api-test-simple</module>
+        <module>zxgk-api-user-simple</module>
+    </modules>
+
+</project>
